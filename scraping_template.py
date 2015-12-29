@@ -32,7 +32,7 @@ for table_row in soup.select(".inmatesList tr"):
 inmates = []
 
 # Loop over inmates direct link
-for inmates_link in inmates_links[:20]:
+for inmates_link in inmates_links[:2]:
 
     # getting HTML from direct link
     r = requests.get(inmates_link)
@@ -70,7 +70,7 @@ for inmates_link in inmates_links[:20]:
     # We need to make a pause to don't overwhelm website
     # time.sleep(1)
 
-# Now we have details for each inmate in dictionary
+# Now we have details for each in dictionary
 # Lets print it
 for inmate in inmates:
     print('{0}, {1}'.format(inmate['name'], inmate['age']))
