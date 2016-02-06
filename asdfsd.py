@@ -1,0 +1,1 @@
+print("Ab123".islower())
